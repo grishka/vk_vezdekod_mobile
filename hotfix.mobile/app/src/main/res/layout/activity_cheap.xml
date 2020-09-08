@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include layout="@layout/header3"/>
+    <RelativeLayout
+        android:id="@+id/closeRL"
+        android:layout_margin="16dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+        <ImageView
+            android:src="@mipmap/close"
+            android:layout_width="24dp"
+            android:layout_height="24dp">
+
+        </ImageView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_background"
+        android:layout_centerHorizontal="true"
+        android:layout_height="82dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#404F54">
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/nextBTN"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/black_background"
+
+            android:background="@drawable/fisrt_gr"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="36dp"
+            android:layout_marginRight="36dp"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:textColor="@color/black_background"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:text="Найти авиабилеты и отели"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

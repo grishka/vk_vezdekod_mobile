@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"  android:id="@+id/selected" android:oneshot="false">
+    <!-- The drawables used here can be solid colors, gradients, shapes, images, etc. -->
+    <item android:drawable="@drawable/fisrt_gr" android:duration="6000"  />
+    <item android:drawable="@drawable/second_gr" android:duration="6000" />
+    <!--  <item android:drawable="@drawable/third_gr" android:duration="6000"  />-->
+
+
+</animation-list>

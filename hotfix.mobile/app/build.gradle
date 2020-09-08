@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.0"
+    defaultConfig {
+        applicationId "com.preview.planner"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+repositories {
+    maven { url "https://jitpack.io" }
+    maven { url 'https://dl.bintray.com/drummer-aidan/maven' }
+    maven { url "https://s3.amazonaws.com/avocarrot-android-builds/dist" }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'androidx.test.ext:junit:1.1.1'
+    testImplementation 'org.robolectric:robolectric:4.3.1'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
+    implementation 'com.google.android.material:material:1.1.0-alpha10'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta03' //RecyclerView
+    implementation "com.squareup.retrofit2:converter-gson:2.3.0"
+    implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
+    implementation 'com.github.kittinunf.fuel:fuel-android:1.8.0'
+    implementation "com.squareup.retrofit2:retrofit:2.3.0"
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation "androidx.preference:preference-ktx:1.0.0"
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation 'com.google.android.gms:play-services-base:11.8.0'
+    implementation 'com.google.android.gms:play-services-auth:11.8.0'
+    implementation 'com.google.apis:google-api-services-vision:v1-rev16-1.22.0'
+    implementation ('com.google.api-client:google-api-client-android:1.22.0') {
+        exclude module: 'httpclient'
+    }
+    implementation ('com.google.http-client:google-http-client-gson:1.20.0') {
+        exclude module: 'httpclient'
+    }
+    implementation 'com.dynamitechetan.flowinggradient:flowinggradient:1.1'
+
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:2.1.0'
+    // for experimental rx picker
+    implementation 'com.github.esafirm.android-image-picker:rximagepicker:2.1.0'
+
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'org.jsoup:jsoup:1.12.1'
+
+}

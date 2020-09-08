@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/search"
+        android:icon="@mipmap/mdi_format_grid"
+        android:title="Поиск" />
+
+    <item
+        android:id="@+id/searchPhoto"
+        android:icon="@mipmap/mdi_format_list_bulleted"
+        android:title="Поиск по фото" />
+
+    <item
+        android:id="@+id/favorite"
+        android:icon="@mipmap/mdi_format_coins"
+        android:title="Избранное" />
+
+
+
+</menu>

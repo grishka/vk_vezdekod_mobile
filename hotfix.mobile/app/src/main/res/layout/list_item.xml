@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/plashka">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp">
+            <TextView
+                android:id="@+id/keyTV"
+                android:text="Отель"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white50"
+                android:textSize="14sp"/>
+            <TextView
+                android:id="@+id/valueTV"
+                android:text="1500 рублей"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

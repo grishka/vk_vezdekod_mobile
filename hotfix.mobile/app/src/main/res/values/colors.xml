@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#21292E</color>
+    <color name="colorTopBar">#21292E</color>
+    <color name="colorPrimaryDark">#21292E</color>
+    <color name="colorAccent">#55DED4</color>
+    <color name="colorStartingBackground">#405663</color>
+
+    <color name="colorToolbar">#aa0277bd</color>
+    <color name="primary">#aa0277bd</color>
+
+    <item name="menu_header" type="color">#527397</item>
+    <item name="menu" type="color">#56779c</item>
+    <item name="menu_select_item" type="color">#56779c</item>
+
+    <item name="blue" type="color">#ff24c4ff</item>
+    <item name="hashtags_color" type="color">#05C3B5</item>
+    <item name="blue_light" type="color">#ffcedbe4</item>
+    <item name="blue_dark_empty_photo" type="color">#ff2c3f52</item>
+    <item name="item_pressed" type="color">#ff24c4ff</item>
+    <item name="red" type="color">#ffdb1313</item>
+    <item name="green" type="color">#9ac923</item>
+    <item name="black_alpha_50" type="color">#77000000</item>
+    <item name="black_alpha_70" type="color">#ab000000</item>
+    <item name="black_alpha_90" type="color">#dc000000</item>
+    <item name="black_alpha_20" type="color">#27000000</item>
+    <item name="black_alpha_0" type="color">#00000000</item>
+    <item name="black_alpha_5" type="color">#07000000</item>
+    <item name="white_alpha_40" type="color">#66ffffff</item>
+
+    <color name="light_green">#17BBB0</color>
+    <color name="orange_cost">#FD8E43</color>
+
+    <color name="vk_auth_background">#4f81b6</color>
+    <color name="white_70">#aaffffff</color>
+    <color name="white_60">#90ffffff</color>
+    <color name="white_40">#47ffffff</color>
+
+    <color name="vk_enter">#6496cb</color>
+    <color name="blue_text">#197DE5</color>
+    <color name="vk_enter_pressed">#5c8dc1</color>
+
+    <color name="vk_white">#ffffff</color>
+    <color name="vk_black">#000000</color>
+    <color name="money_background">#f7ae2d</color>
+    <color name="tab_indicator">#ffd62b</color>
+    <color name="background_green_task">#c0ffac</color>
+    <color name="button_task">#FFBD59</color>
+    <color name="button_task_pressed">#ffd62b</color>
+    <color name="button_completed">#5ce831</color>
+
+    <color name="green_light">#55DED4</color>
+    <color name="green_dark">#05C3B5</color>
+    <color name="dark_bar">#21292E</color>
+
+    <color name="back_text_orange">#fc582f</color>
+
+    <item name="black_alpha_60" type="color">#83000000</item>
+    <color name="like_color">#03A0E3</color>
+
+
+    <color name="button_border">#ff80ab</color>
+    <item name="black_alpha_80" type="color">#c7000000</item>
+    <color name="white">#ffffff</color>
+    <color name="black">#383838</color>
+    <color name="black_background">#102329</color>
+    <color name="gray">#5b5b5b</color>
+    <color name="light_gray">#e4e4e4</color>
+    <color name="transparent">#00000000</color>
+    <color name="orange">#EF6C00</color>
+    <color name="cyan">#0097A7</color>
+    <color name="main">#8641BF</color>
+    <color name="white_0">#00FFFFFF</color>
+    <color name="light_gray_bg">#F9F9F9</color>
+    <color name="plashka">#19323A</color>
+    <color name="white50">#99ffffff</color>
+    <color name="gradient_1">#40D2FF</color>
+    <color name="gradient_2">#88FD9F</color>
+
+</resources>
