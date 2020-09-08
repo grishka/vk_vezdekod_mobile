@@ -15,6 +15,7 @@ import android.util.Log
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.Toast
+import androidx.annotation.VisibleForTesting
 import androidx.core.app.ActivityCompat
 import com.dynamitechetan.flowinggradient.FlowingGradientClass
 import com.google.android.gms.auth.GoogleAuthUtil
@@ -243,7 +244,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadByCategory(category: String) {
+    @VisibleForTesting
+    fun loadByCategory(category: String) {
         var city = "Rimini"
         var cityRu = "Римини"
         when(category){
