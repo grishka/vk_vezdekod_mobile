@@ -1,5 +1,6 @@
 package com.travels.searchtravels.activity;
 
+import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
@@ -35,8 +36,10 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -59,6 +62,14 @@ public class DetailsActivity extends AppCompatActivity {
     private Button searchBTN;
     private LinkedHashMap<String, String> data = new LinkedHashMap<>();
     private ViewGroup header;
+
+    @VisibleForTesting
+    public static URLProvider urlProvider=new URLProvider() {
+        @Override
+        public URL createURL(String s) throws MalformedURLException {
+            return new URL(s);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,7 +126,7 @@ public class DetailsActivity extends AppCompatActivity {
             public void run() {
                 URL url = null;
                 try {
-                    url = new URL("https://nomadlist.com/cost-of-living/in/" + city.toLowerCase().trim());
+                    url = urlProvider.createURL("https://nomadlist.com/cost-of-living/in/" + city.toLowerCase().trim());
                     Log.d("myLogs","url = " + url);
                     Document document = Jsoup.parse(url, 5000);
 
@@ -132,7 +143,7 @@ public class DetailsActivity extends AppCompatActivity {
                     Log.d("myLogs", "prices fieldNames = " + fieldNames);
 
 
-                    URL obj = new URL("https://autocomplete.travelpayouts.com/places2?locale=en&types[]=city&term="+city);
+                    URL obj = urlProvider.createURL("https://autocomplete.travelpayouts.com/places2?locale=en&types[]=city&term="+city);
                     HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
 
                     //add reuqest header
@@ -159,7 +170,7 @@ public class DetailsActivity extends AppCompatActivity {
 
 
 
-                    URL obj2 = new URL("https://api.travelpayouts.com/v1/prices/cheap?origin=LED&depart_date=2019-12&return_date=2019-12&token=471ae7d420d82eb92428018ec458623b&destination="+code);
+                    URL obj2 = urlProvider.createURL("https://api.travelpayouts.com/v1/prices/cheap?origin=LED&depart_date=2019-12&return_date=2019-12&token=471ae7d420d82eb92428018ec458623b&destination="+code);
                     HttpURLConnection connection2 = (HttpURLConnection) obj2.openConnection();
 
                     //add reuqest header
@@ -384,5 +395,9 @@ public class DetailsActivity extends AppCompatActivity {
             map.remove(entry.getKey());
             map.put(entry.getKey(), entry.getValue());
         }
+    }
+
+    public interface URLProvider{
+        public URL createURL(String s) throws IOException;
     }
 }

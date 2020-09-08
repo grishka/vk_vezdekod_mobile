@@ -25,7 +25,6 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(AndroidJUnit4.class)
 public class CategoryTests{
-	private ActivityScenario<MainActivity> scenario;
 	@Rule
 	public IntentsTestRule<MainActivity> intentsTestRule=new IntentsTestRule<>(MainActivity.class);
 	@Rule
