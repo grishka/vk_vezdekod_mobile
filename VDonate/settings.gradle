@@ -1,0 +1,2 @@
+include ':VDonate'
+rootProject.name='VDonate'

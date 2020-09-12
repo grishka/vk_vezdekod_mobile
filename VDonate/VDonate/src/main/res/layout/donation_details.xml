@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.grishka.appkit.views.FragmentRootLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#FFF">
+
+		<LinearLayout
+			android:id="@+id/appkit_content"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+			<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1"
+				android:id="@+id/scroll">
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<FrameLayout
+						android:layout_width="match_parent"
+						android:layout_height="140dp">
+						<ImageView
+							android:id="@+id/cover_image"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:scaleType="centerCrop"/>
+						<ImageView
+							android:layout_width="match_parent"
+							android:layout_height="112dp"
+							android:scaleType="fitXY"
+							android:src="@drawable/top_scrim"/>
+						<View
+							android:id="@+id/cover_fader"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:alpha="0"
+							android:background="#FFF"/>
+					</FrameLayout>
+
+					<TextView
+						android:id="@+id/title"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="16dp"
+						android:layout_marginLeft="12dp"
+						android:layout_marginRight="12dp"
+						android:textStyle="bold"
+						android:textSize="24dp"
+						android:textColor="?android:textColorPrimary"
+						tools:text="Title"/>
+
+					<TextView
+						android:id="@+id/subtitle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textColor="@color/textSubhead"
+						android:layout_marginTop="4dp"
+						android:layout_marginLeft="12dp"
+						android:layout_marginRight="12dp"
+						android:textSize="14dp"
+						android:fontFamily="sans-serif-medium"
+						tools:text="Subtitle"/>
+
+					<TextView
+						android:id="@+id/subsubtitle"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="4dp"
+						android:layout_marginLeft="12dp"
+						android:layout_marginRight="12dp"
+						android:textColor="#818C99"
+						android:textSize="13dp"
+						tools:text="Subsubtitle"/>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="0.33dp"
+						android:layout_marginTop="16dp"
+						android:layout_marginLeft="12dp"
+						android:layout_marginRight="12dp"
+						android:background="#D7D8D9"/>
+
+					<RelativeLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="12dp"
+						android:layout_marginRight="12dp"
+						android:layout_marginTop="16dp"
+						android:layout_marginBottom="16dp">
+
+						<TextView
+							android:id="@+id/big_progress_target"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentRight="true"
+							android:textSize="14dp"
+							android:textColor="#818C99"
+							android:fontFamily="sans-serif-medium"
+							tools:text="1234"/>
+
+						<TextView
+							android:id="@+id/big_progress_title"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_toLeftOf="@id/big_progress_target"
+							android:layout_alignParentLeft="true"
+							android:layout_marginRight="8dp"
+							android:textColor="?android:textColorPrimary"
+							android:textSize="14dp"
+							android:singleLine="true"
+							android:ellipsize="end"
+							tools:text="Нужно собрать до тогда-то"/>
+
+						<ProgressBar
+							android:id="@+id/big_progress_bar"
+							android:layout_width="match_parent"
+							android:layout_height="24dp"
+							android:layout_below="@id/big_progress_title"
+							android:layout_marginTop="6dp"
+							android:max="1000"
+							android:progressDrawable="@drawable/green_progress_bar_big"
+							style="@android:style/Widget.Material.ProgressBar.Horizontal"/>
+
+						<TextView
+							android:id="@+id/big_progress_collected"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_alignParentLeft="true"
+							android:layout_marginTop="3dp"
+							android:layout_alignTop="@id/big_progress_bar"
+							android:textSize="14dp"
+							android:textColor="#fff"
+							android:fontFamily="sans-serif-medium"
+							tools:text="1234"/>
+
+						<TextView
+							android:id="@+id/big_progress_fully_collected"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="3dp"
+							android:layout_alignTop="@id/big_progress_bar"
+							android:textSize="14dp"
+							android:textColor="#fff"
+							android:fontFamily="sans-serif-medium"
+							android:gravity="center"
+							android:visibility="gone"
+							tools:text="1234"/>
+
+					</RelativeLayout>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="0.33dp"
+						android:layout_marginLeft="12dp"
+						android:layout_marginRight="12dp"
+						android:background="#D7D8D9"/>
+
+					<TextView
+						android:id="@+id/description"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="12dp"
+						android:layout_marginRight="12dp"
+						android:layout_marginTop="24dp"
+						android:layout_marginBottom="24dp"
+						android:textSize="15dp"
+						android:textColor="?android:textColorPrimary"
+						tools:text="Description"/>
+
+				</LinearLayout>
+			</ScrollView>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="60dp">
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="0.33dp"
+					android:background="#D7D8D9"/>
+				
+				<Button
+					android:id="@+id/donate_button"
+					android:layout_width="wrap_content"
+					android:layout_height="36dp"
+					android:layout_alignParentRight="true"
+					android:layout_margin="12dp"
+					android:background="@drawable/green_button"
+					android:fontFamily="sans-serif-medium"
+					android:textSize="14dp"
+					android:paddingTop="0dp"
+					android:paddingBottom="0dp"
+					android:text="Помочь"/>
+
+				<TextView
+					android:id="@+id/progress_text"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="12dp"
+					android:layout_marginTop="12dp"
+					android:layout_toLeftOf="@id/donate_button"
+					android:layout_alignParentLeft="true"
+					android:textSize="14dp"
+					android:textColor="?android:textColorPrimary"
+					android:singleLine="true"
+					android:ellipsize="end"
+					tools:text="Собрано 38940 из 49302"/>
+
+				<ProgressBar
+					android:id="@+id/progress_bar"
+					android:layout_width="wrap_content"
+					android:layout_height="4dp"
+					android:layout_below="@id/progress_text"
+					android:layout_marginTop="8dp"
+					android:layout_marginLeft="12dp"
+					android:layout_marginRight="12dp"
+					android:layout_toLeftOf="@id/donate_button"
+					android:layout_alignParentLeft="true"
+					android:max="1000"
+					android:progressDrawable="@drawable/green_progress_bar"
+					style="@android:style/Widget.Material.ProgressBar.Horizontal"/>
+			</RelativeLayout>
+
+		</LinearLayout>
+
+		<include layout="@layout/appkit_toolbar"/>
+
+		<View
+			android:id="@+id/status_bar_bg"
+			android:layout_width="match_parent"
+			android:layout_height="1px"
+			android:background="#FFF"
+			android:transformPivotY="0dp"
+			android:elevation="10dp"
+			android:outlineProvider="none"
+			android:visibility="invisible"/>
+
+	</FrameLayout>
+</me.grishka.appkit.views.FragmentRootLinearLayout>

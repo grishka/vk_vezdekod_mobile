@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:padding="8dp"
+	android:clipToPadding="false">
+	<RelativeLayout
+		android:id="@+id/snippet"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/snippet_bg">
+
+		<ImageView
+			android:id="@+id/cover_image"
+			android:layout_width="match_parent"
+			android:layout_height="140dp"
+			android:scaleType="centerCrop"/>
+
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/cover_image"
+			android:layout_marginTop="8dp"
+			android:layout_marginLeft="12dp"
+			android:layout_marginRight="12dp"
+			android:fontFamily="sans-serif-medium"
+			android:textColor="?android:textColorPrimary"
+			android:textSize="15dp"
+			android:singleLine="true"
+			android:ellipsize="end"
+			tools:text="Title"/>
+
+		<TextView
+			android:id="@+id/subtitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/title"
+			android:layout_marginTop="2dp"
+			android:layout_marginLeft="12dp"
+			android:layout_marginRight="12dp"
+			android:textSize="14dp"
+			android:textColor="@color/placeholder"
+			android:singleLine="true"
+			android:ellipsize="end"
+			tools:text="Subtitle"/>
+
+		<View
+			android:id="@+id/separator"
+			android:layout_width="match_parent"
+			android:layout_height="0.33dp"
+			android:layout_below="@id/subtitle"
+			android:layout_marginTop="8dp"
+			android:layout_marginLeft="12dp"
+			android:layout_marginRight="12dp"
+			android:background="#D7D8D9"/>
+		
+		<Button
+			android:id="@+id/donate_button"
+			android:layout_width="wrap_content"
+			android:layout_height="30dp"
+			android:layout_below="@id/separator"
+			android:layout_alignParentRight="true"
+			android:layout_margin="12dp"
+			android:background="@drawable/bordered_button"
+			android:textColor="@color/accent2"
+			android:fontFamily="sans-serif-medium"
+			android:textSize="14dp"
+			android:paddingTop="0dp"
+			android:paddingBottom="0dp"
+			android:text="Помочь"/>
+
+		<TextView
+			android:id="@+id/progress_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/separator"
+			android:layout_marginLeft="12dp"
+			android:layout_marginTop="12dp"
+			android:layout_toLeftOf="@id/donate_button"
+			android:layout_alignParentLeft="true"
+			android:textSize="13dp"
+			android:textColor="?android:textColorPrimary"
+			android:singleLine="true"
+			android:ellipsize="end"
+			tools:text="Собрано 38940 из 49302"/>
+		
+		<ProgressBar
+			android:id="@+id/progress_bar"
+			android:layout_width="wrap_content"
+			android:layout_height="4dp"
+			android:layout_below="@id/progress_text"
+			android:layout_marginTop="8dp"
+			android:layout_marginLeft="12dp"
+			android:layout_toLeftOf="@id/donate_button"
+			android:layout_alignParentLeft="true"
+			android:max="1000"
+			android:progressDrawable="@drawable/blue_progress_bar"
+			style="@android:style/Widget.Material.ProgressBar.Horizontal"/>
+
+	</RelativeLayout>
+</FrameLayout>

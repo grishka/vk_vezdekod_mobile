@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center"
+	android:paddingLeft="12dp"
+	android:paddingRight="12dp">
+
+	<RelativeLayout
+		android:id="@+id/type_target"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="12dp"
+		android:background="@drawable/big_button">
+		<ImageView
+			android:id="@+id/icon"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:layout_marginTop="14dp"
+			android:layout_marginLeft="14dp"
+			android:src="@drawable/ic_target"/>
+
+		<ImageView
+			android:id="@+id/chevron"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="18dp"
+			android:src="@drawable/ic_chevron"/>
+
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/icon"
+			android:layout_toLeftOf="@id/chevron"
+			android:layout_marginTop="12dp"
+			android:layout_marginLeft="14dp"
+			android:layout_marginRight="14dp"
+			android:textColor="?android:textColorPrimary"
+			android:textSize="16dp"
+			android:fontFamily="sans-serif-medium"
+			android:singleLine="true"
+			android:ellipsize="end"
+			android:text="Целевой сбор"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@id/title"
+			android:layout_alignRight="@id/title"
+			android:layout_marginBottom="12dp"
+			android:layout_below="@id/title"
+			android:layout_marginTop="2dp"
+			android:singleLine="true"
+			android:ellipsize="end"
+			android:textColor="?android:textColorSecondary"
+			android:textSize="13dp"
+			android:text="Когда есть определённая цель"/>
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/type_recurring"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@drawable/big_button">
+		<ImageView
+			android:id="@+id/icon"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:layout_marginTop="14dp"
+			android:layout_marginLeft="14dp"
+			android:src="@drawable/ic_calendar"/>
+
+		<ImageView
+			android:id="@+id/chevron"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginRight="18dp"
+			android:src="@drawable/ic_chevron"/>
+
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@id/icon"
+			android:layout_toLeftOf="@id/chevron"
+			android:layout_marginTop="12dp"
+			android:layout_marginLeft="14dp"
+			android:layout_marginRight="14dp"
+			android:textColor="?android:textColorPrimary"
+			android:textSize="16dp"
+			android:fontFamily="sans-serif-medium"
+			android:singleLine="true"
+			android:ellipsize="end"
+			android:text="Регулярный сбор"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@id/title"
+			android:layout_alignRight="@id/title"
+			android:layout_marginBottom="12dp"
+			android:layout_below="@id/title"
+			android:layout_marginTop="2dp"
+			android:singleLine="true"
+			android:ellipsize="end"
+			android:textColor="?android:textColorSecondary"
+			android:textSize="13dp"
+			android:text="Если помощь нужна ежемесячно"/>
+	</RelativeLayout>
+
+</LinearLayout>

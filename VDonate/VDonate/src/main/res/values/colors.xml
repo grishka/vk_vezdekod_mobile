@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="background">#FFF</color>
+	<color name="accent">#3F8AE0</color>
+	<color name="accent2">#4986CC</color>
+	<color name="textPrimary">#000</color>
+	<color name="textSubhead">#6D7885</color>
+	<color name="placeholder">#818C99</color>
+
+	<color name="navBar">#000</color>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="32dp"
+		android:layout_marginRight="32dp"
+		android:textSize="16dp"
+		android:lineSpacingExtra="1dp"
+		android:textColor="#818C99"
+		android:gravity="center"
+		android:text="У Вас пока нет сборов.\nНачните доброе дело."/>
+
+	<Button
+		android:id="@+id/next"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="24dp"
+		android:text="Создать сбор"/>
+
+</LinearLayout>
