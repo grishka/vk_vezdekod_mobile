@@ -2,6 +2,7 @@ package me.grishka.vezdekod.donate.fragments;
 
 import android.animation.ObjectAnimator;
 import android.content.res.ColorStateList;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -130,7 +131,6 @@ public class DonationDetailsFragment extends ToolbarFragment{
 
 		updateProgress();
 
-
 		toolbar=getToolbar();
 		toolbar.setElevation(0);
 		toolbar.setBackgroundColor(0xFFFFFFFF);
@@ -167,6 +167,12 @@ public class DonationDetailsFragment extends ToolbarFragment{
 				"январе", "феврале", "марте", "апреле", "мае", "июне", "июле", "августе", "сентябре", "ноябре", "октябре", "декабре"
 		};
 		return months[Calendar.getInstance().get(Calendar.MONTH)];
+	}
+
+	@Override
+	public void onConfigurationChanged(Configuration newConfig){
+		super.onConfigurationChanged(newConfig);
+		updateProgress();
 	}
 
 	private void updateProgress(){
