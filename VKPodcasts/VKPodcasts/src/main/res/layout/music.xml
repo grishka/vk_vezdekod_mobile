@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="36dp"
+		android:layout_marginTop="16dp"
+		android:layout_marginLeft="16dp"
+		android:layout_marginRight="16dp"
+		android:layout_marginBottom="8dp"
+		android:paddingLeft="12dp"
+		android:drawableLeft="@drawable/ic_search"
+		android:drawableRight="@drawable/ic_voice_search"
+		android:background="@drawable/secondary_button"
+		android:textSize="16dp"
+		android:textColor="@color/placeholder"
+		android:gravity="center_vertical"
+		android:drawablePadding="9dp"
+		android:text="Поиск"/>
+
+	<RelativeLayout
+		android:id="@+id/music1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="16dp"
+		android:paddingRight="4dp"
+		android:paddingBottom="6dp"
+		android:paddingTop="6dp"
+		android:background="?android:selectableItemBackground">
+		
+		<ImageView
+			android:id="@+id/icon"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:layout_marginRight="12dp"
+			android:scaleType="center"
+			android:background="@drawable/edit_text"
+			android:tint="@color/lightIconTertiary"
+			android:duplicateParentState="false"
+			android:src="@drawable/ic_music_white"/>
+
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:layout_toRightOf="@id/icon"
+			android:layout_toLeftOf="@id/duration"
+			android:textAppearance="@style/headlineRegular"
+			android:singleLine="true"
+			android:text="Never Gonna Give You Up"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/title"
+			android:layout_toRightOf="@id/icon"
+			android:layout_toLeftOf="@id/duration"
+			android:textAppearance="@style/caption1Regular"
+			android:singleLine="true"
+			android:text="Rick Astley"/>
+
+		<ImageView
+			android:id="@+id/more"
+			android:layout_width="36dp"
+			android:layout_height="48dp"
+			android:layout_alignParentRight="true"
+			android:scaleType="center"
+			android:src="@drawable/ic_more"/>
+
+		<TextView
+			android:id="@+id/duration"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toLeftOf="@id/more"
+			android:layout_marginLeft="8dp"
+			android:layout_centerVertical="true"
+			android:textAppearance="@style/caption1Regular"
+			android:text="3:32"/>
+
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:id="@+id/music2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="16dp"
+		android:paddingRight="4dp"
+		android:paddingBottom="6dp"
+		android:paddingTop="6dp"
+		android:background="?android:selectableItemBackground">
+
+		<ImageView
+			android:id="@+id/icon"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:layout_marginRight="12dp"
+			android:scaleType="center"
+			android:background="@drawable/edit_text"
+			android:tint="@color/lightIconTertiary"
+			android:src="@drawable/ic_music_white"/>
+
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:layout_toRightOf="@id/icon"
+			android:layout_toLeftOf="@id/duration"
+			android:textAppearance="@style/headlineRegular"
+			android:singleLine="true"
+			android:text="All Star"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/title"
+			android:layout_toRightOf="@id/icon"
+			android:layout_toLeftOf="@id/duration"
+			android:textAppearance="@style/caption1Regular"
+			android:singleLine="true"
+			android:text="Smash Mouth"/>
+
+		<ImageView
+			android:id="@+id/more"
+			android:layout_width="36dp"
+			android:layout_height="48dp"
+			android:layout_alignParentRight="true"
+			android:scaleType="center"
+			android:src="@drawable/ic_more"/>
+
+		<TextView
+			android:id="@+id/duration"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toLeftOf="@id/more"
+			android:layout_marginLeft="8dp"
+			android:layout_centerVertical="true"
+			android:textAppearance="@style/caption1Regular"
+			android:text="3:56"/>
+
+	</RelativeLayout>
+
+</LinearLayout>

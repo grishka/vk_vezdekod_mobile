@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item>
+		<ripple android:color="#20000000">
+			<item>
+				<selector android:enterFadeDuration="150">
+					<item android:state_checked="true">
+						<shape>
+							<corners android:radius="8dp"/>
+							<solid android:color="@color/accent2"/>
+						</shape>
+					</item>
+					<item>
+						<shape>
+							<corners android:radius="8dp"/>
+							<solid android:color="#F2F3F5"/>
+						</shape>
+					</item>
+				</selector>
+			</item>
+		</ripple>
+	</item>
+	<item android:left="10dp" android:top="10dp" android:right="10dp" android:bottom="10dp">
+		<selector android:enterFadeDuration="150">
+			<item android:drawable="@drawable/ic_music_white" android:state_checked="true"/>
+			<item android:drawable="@drawable/ic_music"/>
+		</selector>
+	</item>
+</layer-list>

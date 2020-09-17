@@ -1,0 +1,2 @@
+include ':VKPodcasts'
+rootProject.name='VKPodcasts'

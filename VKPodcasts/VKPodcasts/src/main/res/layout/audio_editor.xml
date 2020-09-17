@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/scroll">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:clipToPadding="false"
+		android:padding="16dp">
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<me.grishka.vezdekod.podcasts.views.WaveformEditorView
+				android:id="@+id/waveform"
+				android:layout_width="match_parent"
+				android:layout_height="135dp"/>
+
+			<TextView
+				android:id="@+id/fade_in_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="left|bottom"
+				android:layout_marginBottom="4dp"
+				android:layout_marginLeft="10dp"
+				android:textAppearance="@style/caption4Regular"
+				android:visibility="gone"
+				android:text="Появление: вкл"/>
+
+			<TextView
+				android:id="@+id/fade_out_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="right|bottom"
+				android:layout_marginBottom="4dp"
+				android:layout_marginRight="10dp"
+				android:textAppearance="@style/caption4Regular"
+				android:visibility="gone"
+				android:text="Затухание: вкл"/>
+
+			<TextView
+				android:id="@+id/music_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="40dp"
+				android:layout_marginLeft="10dp"
+				android:textAppearance="@style/caption4Regular"
+				android:visibility="gone"
+				android:maxWidth="200dp"
+				android:singleLine="true"
+				android:ellipsize="middle"
+				tools:text="Artist - Song"/>
+
+		</FrameLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:padding="8dp"
+			android:background="@drawable/audio_editor_buttons_bg">
+
+			<ImageButton
+				android:id="@+id/play_btn"
+				android:layout_width="44dp"
+				android:layout_height="44dp"
+				android:scaleType="center"
+				android:tint="#FFF"
+				android:src="@drawable/ic_play_24"/>
+
+			<View
+				android:layout_width="0dp"
+				android:layout_height="1dp"
+				android:layout_weight="1"/>
+
+			<ImageButton
+				android:id="@+id/scissors_btn"
+				android:layout_width="44dp"
+				android:layout_height="44dp"
+				android:tint="@color/accent"
+				android:background="@drawable/secondary_button"
+				android:scaleType="center"
+				android:src="@drawable/ic_scissors"/>
+
+			<ImageButton
+				android:id="@+id/undo_btn"
+				android:layout_width="44dp"
+				android:layout_height="44dp"
+				android:layout_marginLeft="4dp"
+				android:tint="@color/accent"
+				android:background="@drawable/secondary_button"
+				android:scaleType="center"
+				android:src="@drawable/ic_arrow_uturn_left_outline_24"/>
+
+			<View
+				android:layout_width="0dp"
+				android:layout_height="1dp"
+				android:layout_weight="1"/>
+
+			<ToggleButton
+				android:id="@+id/music_btn"
+				android:layout_width="44dp"
+				android:layout_height="44dp"
+				android:textOn="@null"
+				android:textOff="@null"
+				android:stateListAnimator="@null"
+				android:background="@drawable/toggle_music"/>
+
+			<ToggleButton
+				android:id="@+id/fade_in_btn"
+				android:layout_width="44dp"
+				android:layout_height="44dp"
+				android:layout_marginLeft="4dp"
+				android:layout_marginRight="4dp"
+				android:textOn="@null"
+				android:textOff="@null"
+				android:stateListAnimator="@null"
+				android:background="@drawable/toggle_fade_in"/>
+
+			<ToggleButton
+				android:id="@+id/fade_out_btn"
+				android:layout_width="44dp"
+				android:layout_height="44dp"
+				android:textOn="@null"
+				android:textOff="@null"
+				android:stateListAnimator="@null"
+				android:background="@drawable/toggle_fade_out"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="27dp"
+			android:layout_marginBottom="9dp"
+			android:textAppearance="@style/caption1Regular"
+			android:fontFamily="sans-serif-medium"
+			android:textAllCaps="true"
+			android:text="Таймкоды"/>
+
+		<LinearLayout
+			android:id="@+id/timecode_container"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="-4dp"
+			android:orientation="vertical"/>
+
+		<TextView
+			android:id="@+id/add_timecode"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:layout_marginLeft="-16dp"
+			android:layout_marginRight="-16dp"
+			android:background="?android:selectableItemBackground"
+			android:textSize="16dp"
+			android:textColor="@color/accent"
+			android:gravity="center_vertical"
+			android:drawableLeft="@drawable/ic_add"
+			android:drawablePadding="16dp"
+			android:paddingLeft="16dp"
+			android:text="Добавить таймкод"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:textAppearance="@style/caption1Regular"
+			android:text="Отметки времени с названием темы. Позволяют слушателям легче путешествовать по подкасту."/>
+
+	</LinearLayout>
+
+</ScrollView>
