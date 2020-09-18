@@ -1,0 +1,2 @@
+include ':EmoMap'
+rootProject.name='EmoMap'

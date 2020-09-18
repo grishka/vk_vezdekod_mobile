@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/card_bg"
+	android:outlineProvider="background"
+	android:elevation="3dp">
+
+	<ImageView
+		android:id="@+id/ava"
+		android:layout_width="28dp"
+		android:layout_height="28dp"
+		android:layout_marginLeft="12dp"
+		android:layout_marginTop="8dp"
+		android:src="@drawable/ava1"/>
+
+	<TextView
+		android:id="@+id/name"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/ava"
+		android:layout_marginLeft="8dp"
+		android:layout_marginTop="14dp"
+		android:textAppearance="@style/caption1Regular"
+		android:textColor="@color/textPrimary"
+		android:text="Artem Ka"/>
+	
+	<ImageView
+		android:id="@+id/photo"
+		android:layout_width="match_parent"
+		android:layout_height="162dp"
+		android:layout_below="@id/ava"
+		android:layout_marginTop="8dp"
+		android:scaleType="centerCrop"
+		android:src="@drawable/image"/>
+
+	<TextView
+		android:id="@+id/comments"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/photo"
+		android:layout_marginLeft="12dp"
+		android:layout_marginTop="8dp"
+		android:textColor="#59000000"
+		android:textAppearance="@style/caption1Regular"
+		android:text="15 комментариев"/>
+	
+	<ImageView
+		android:id="@+id/like"
+		android:layout_width="48dp"
+		android:layout_height="44dp"
+		android:layout_below="@id/comments"
+		android:scaleType="center"
+		android:src="@drawable/ic_like"/>
+
+	<ImageView
+		android:id="@+id/share"
+		android:layout_width="48dp"
+		android:layout_height="44dp"
+		android:layout_below="@id/comments"
+		android:layout_toRightOf="@id/like"
+		android:scaleType="center"
+		android:src="@drawable/ic_share"/>
+
+	<ImageView
+		android:id="@+id/more"
+		android:layout_width="48dp"
+		android:layout_height="44dp"
+		android:layout_below="@id/comments"
+		android:layout_alignParentRight="true"
+		android:scaleType="center"
+		android:src="@drawable/ic_more_horiz"/>
+
+</RelativeLayout>

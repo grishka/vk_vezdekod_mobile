@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="48dp"
+	android:background="#FFF"
+	android:elevation="3dp">
+
+	<TextView
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:gravity="center"
+		android:textColor="#2975CC"
+		android:textSize="10dp"
+		android:fontFamily="sans-serif-medium"
+		android:drawableTop="@drawable/ic_news"
+		android:drawablePadding="-5dp"
+		android:paddingTop="3dp"
+		android:text="Новости"/>
+
+	<TextView
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:gravity="center"
+		android:textColor="#99A2AD"
+		android:textSize="10dp"
+		android:fontFamily="sans-serif-medium"
+		android:drawableTop="@drawable/ic_services"
+		android:drawablePadding="-5dp"
+		android:paddingTop="3dp"
+		android:text="Сервисы"/>
+
+	<TextView
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:gravity="center"
+		android:textColor="#99A2AD"
+		android:textSize="10dp"
+		android:fontFamily="sans-serif-medium"
+		android:drawableTop="@drawable/ic_messages"
+		android:drawablePadding="-5dp"
+		android:paddingTop="3dp"
+		android:text="Сообщения"/>
+
+	<TextView
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:gravity="center"
+		android:textColor="#99A2AD"
+		android:textSize="10dp"
+		android:fontFamily="sans-serif-medium"
+		android:drawableTop="@drawable/ic_clips"
+		android:drawablePadding="-5dp"
+		android:paddingTop="3dp"
+		android:text="Клипы"/>
+
+	<TextView
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:layout_weight="1"
+		android:gravity="center"
+		android:textColor="#99A2AD"
+		android:textSize="10dp"
+		android:fontFamily="sans-serif-medium"
+		android:drawableTop="@drawable/ic_profile"
+		android:drawablePadding="-5dp"
+		android:paddingTop="3dp"
+		android:text="Профиль"/>
+
+</LinearLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.grishka.appkit.views.FragmentRootLinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#F6F6F6">
+
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<com.mapbox.mapboxsdk.maps.MapView
+			android:id="@+id/map"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginBottom="142dp"
+			app:mapbox_uiLogoMarginLeft="8dp"
+			app:mapbox_uiLogoMarginBottom="20dp"
+			app:mapbox_uiAttributionGravity="right|bottom"
+			app:mapbox_uiAttributionMarginRight="8dp"
+			app:mapbox_uiAttributionMarginBottom="20dp"
+			app:mapbox_uiCompassMarginTop="56dp"/>
+
+		<FrameLayout
+			android:id="@+id/sides_emojis"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:paddingBottom="162dp"
+			android:paddingTop="8dp"
+			android:paddingLeft="8dp"
+			android:paddingRight="8dp"
+			android:visibility="invisible"
+			android:clipToPadding="false">
+
+			<TextView
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_gravity="left|center_vertical"
+				android:includeFontPadding="false"
+				android:textSize="24dp"
+				android:gravity="center"
+				android:textColor="#000"
+				android:background="@drawable/white_circle"
+				android:elevation="8dp"
+				android:outlineProvider="background"
+				android:text="🙁"/>
+
+			<TextView
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_gravity="right|center_vertical"
+				android:includeFontPadding="false"
+				android:textSize="24dp"
+				android:gravity="center"
+				android:textColor="#000"
+				android:background="@drawable/white_circle"
+				android:elevation="8dp"
+				android:outlineProvider="background"
+				android:text="😃"/>
+
+			<TextView
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_gravity="center_horizontal|top"
+				android:includeFontPadding="false"
+				android:textSize="24dp"
+				android:gravity="center"
+				android:textColor="#000"
+				android:background="@drawable/white_circle"
+				android:elevation="8dp"
+				android:outlineProvider="background"
+				android:text="😜"/>
+
+			<TextView
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_gravity="center_horizontal|bottom"
+				android:includeFontPadding="false"
+				android:textSize="24dp"
+				android:gravity="center"
+				android:textColor="#000"
+				android:background="@drawable/white_circle"
+				android:elevation="8dp"
+				android:outlineProvider="background"
+				android:text="😴"/>
+
+		</FrameLayout>
+		
+		<LinearLayout
+			android:id="@+id/mood_selector"
+			android:layout_width="wrap_content"
+			android:layout_height="36dp"
+			android:layout_gravity="top|center_horizontal"
+			android:layout_marginTop="8dp"
+			android:orientation="horizontal"
+			android:background="@drawable/white_button"
+			android:elevation="2dp"
+			android:gravity="center"
+			android:paddingHorizontal="12dp">
+
+			<TextView
+				android:id="@+id/mood_emoji"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:includeFontPadding="false"
+				android:layout_marginRight="8dp"
+				android:textSize="16dp"
+				android:textColor="#000"
+				android:text="😃"/>
+
+			<TextView
+				android:id="@+id/mood_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="14dp"
+				android:textColor="#000"
+				android:drawableRight="@drawable/ic_dropdown"
+				android:drawablePadding="2dp"
+				android:text="Хорошее настроение"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="154dp"
+			android:layout_gravity="bottom"
+			android:background="@drawable/bottom_bg"
+			android:outlineProvider="background"
+			android:elevation="16dp"
+			android:orientation="vertical">
+			
+			<EditText
+				android:layout_width="match_parent"
+				android:layout_height="36dp"
+				android:layout_marginLeft="16dp"
+				android:layout_marginRight="16dp"
+				android:layout_marginTop="14dp"
+				android:padding="@null"
+				android:drawableLeft="@drawable/ic_search"
+				android:paddingLeft="12dp"
+				android:paddingRight="12dp"
+				android:drawablePadding="8dp"
+				android:textSize="16dp"
+				android:gravity="left|center_vertical"
+				android:background="@drawable/search_field"
+				android:singleLine="true"
+				android:hint="Поиск"/>
+			
+			<me.grishka.appkit.views.UsableRecyclerView
+				android:id="@+id/topic_list"
+				android:layout_width="match_parent"
+				android:layout_height="96dp"
+				android:layout_marginTop="8dp"
+				android:paddingLeft="8dp"
+				android:paddingRight="8dp"
+				android:clipToPadding="false"/>
+
+		</LinearLayout>
+		
+		<ImageView
+			android:id="@+id/close_btn"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:scaleType="center"
+			android:layout_gravity="right|top"
+			android:src="@drawable/ic_dismiss_dark"/>
+
+	</FrameLayout>
+
+</me.grishka.appkit.views.FragmentRootLinearLayout>

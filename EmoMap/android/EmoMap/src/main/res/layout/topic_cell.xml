@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="80dp"
+	android:layout_height="96dp">
+	
+	<TextView
+		android:id="@+id/emoji"
+		android:layout_width="64dp"
+		android:layout_height="64dp"
+		android:layout_marginLeft="8dp"
+		android:layout_marginTop="4dp"
+		android:layout_marginRight="8dp"
+		android:textColor="#000"
+		android:gravity="center"
+		android:background="@drawable/topic_emoji_bg"
+		android:textSize="24dp"
+		android:includeFontPadding="false"
+		tools:text="📷"/>
+
+	<TextView
+		android:id="@+id/title"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/emoji"
+		android:layout_marginTop="6dp"
+		android:gravity="center"
+		android:textSize="12dp"
+		android:textColor="#000"
+		android:singleLine="true"
+		tools:text="Topic"/>
+	
+	<TextView
+		android:id="@+id/emotion_emoji"
+		android:layout_width="20dp"
+		android:layout_height="20dp"
+		android:layout_marginLeft="8dp"
+		android:layout_marginTop="4dp"
+		android:textSize="16dp"
+		android:background="@drawable/white_circle"
+		android:textColor="#000"
+		android:elevation="4dp"
+		android:outlineProvider="background"
+		android:gravity="center"
+		android:includeFontPadding="false"
+		tools:text="😃"/>
+
+</RelativeLayout>
