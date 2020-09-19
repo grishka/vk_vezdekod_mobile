@@ -5,10 +5,10 @@ import Icon20CommentOutline from '@vkontakte/icons/dist/20/comment_outline';
 import Icon20ShareOutline from '@vkontakte/icons/dist/20/share_outline';
 
 const Post = ({data}) => {
-    return <div className="wall-post" style={{height: data.image ? '328.375px' : 'auto'}}>
+    return <div className="wall-post">
         <SimpleCell description="Только что" before={<Avatar size={40} src={data.avatar} />}>{data.name}</SimpleCell>
         {data.text && <Div>{data.text}</Div>}
-        {data.image && <div style={{width: '100%'}}>
+        {data.image && <div style={{width: '100%', minHeight: '60vw'}}>
             <img style={{width: '100%', verticalAlign: 'middle'}} src={data.image}/>
         </div>}
         <Separator/>

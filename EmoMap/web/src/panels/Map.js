@@ -107,7 +107,7 @@ const Map = ({id, go, setTopicId, setModal}) => {
     };
 
     const openPost = (p) => {
-        setModal(<div><Post data={p}/><div style={{height: 'calc(20px + env(safe-area-inset-top))'}}/></div>);
+        setModal(<div><Post data={p}/><div style={{height: 'calc(12px + env(safe-area-inset-bottom))'}}/></div>);
     };
 
     const onMove = () => {
