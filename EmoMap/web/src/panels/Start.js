@@ -14,7 +14,6 @@ const Start = ({id, go, setPopout}) => {
         if (topicId >= 0 && emotionId >= 0 && wallText) {
             // fake coordinates
             const p = posts.filter((x) => x.topic === topicId);
-            console.log(p);
             const p1 = p[0];
             const p2 = p[p.length - 1];
             const lat = (p1.lat + p2.lat) / 2;
@@ -36,13 +35,13 @@ const Start = ({id, go, setPopout}) => {
 
     const openTopics = () => {
         setPopout(<ActionSheet onClose={() => setPopout(null)}>
-            {topics.map((t, i) => <ActionSheetItem onClick={() => setTopicId(i)} autoclose>{t.icon} {t.name}</ActionSheetItem>)}
+            {topics.map((t, i) => <ActionSheetItem onClick={() => setTopicId(i)} autoclose key={i}>{t.icon} {t.name}</ActionSheetItem>)}
         </ActionSheet>);
     };
 
     const openEmotions = () => {
         setPopout(<ActionSheet onClose={() => setPopout(null)}>
-            {emotions.map((t, i) => <ActionSheetItem onClick={() => setEmotionId(i)} autoclose>{t.icon} {t.name}</ActionSheetItem>)}
+            {emotions.map((t, i) => <ActionSheetItem onClick={() => setEmotionId(i)} autoclose key={i}>{t.icon} {t.name}</ActionSheetItem>)}
         </ActionSheet>);
     };
 
