@@ -13,7 +13,8 @@ const Start = ({id, go, setPopout}) => {
     const goNext = () => {
         if (topicId >= 0 && emotionId >= 0 && wallText) {
             // fake coordinates
-            const p = posts.filter((p) => p.topic === topicId);
+            const p = posts.filter((x) => x.topic === topicId);
+            console.log(p);
             const p1 = p[0];
             const p2 = p[p.length - 1];
             const lat = (p1.lat + p2.lat) / 2;

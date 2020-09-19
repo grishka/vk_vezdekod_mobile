@@ -62,3 +62,13 @@
     font-size: 15px!important;
     padding-top: 4px;
 }
+
+.globe-btn {
+    width: 44px;
+    height: 44px;
+    position: fixed;
+    border-radius: 50%;
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-top));
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}

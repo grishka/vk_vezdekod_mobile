@@ -27,7 +27,7 @@ export const posts = [
         "topic": 6,
         "emotion": 2,
         "lat": 59.9666,
-        "lng": "30.48"
+        "lng": 30.48
     },
     {
         "avatar": "http://placeimg.com/50/50/people",
