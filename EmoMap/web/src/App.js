@@ -11,6 +11,7 @@ import Filter from "./panels/Filter";
 const App = () => {
 	const [activePanel, setActivePanel] = useState("start");
 	const [topicId, setTopicId] = useState(0);
+	const [popout, setPopout] = useState(null);
 
 	const changePanel = (p) => {
 		setActivePanel(p);
@@ -33,8 +34,8 @@ const App = () => {
 	}, []);
 
 	return (
-		<View activePanel={activePanel}>
-			<Start id="start" go={changePanel}/>
+		<View activePanel={activePanel} popout={popout}>
+			<Start id="start" go={changePanel} setPopout={setPopout}/>
 			<Feed id="feed" go={changePanel}/>
 			<Map id="map" go={changePanel} setTopicId={setTopicId}/>
 			<Filter id="filter" topicId={topicId}/>

@@ -25,3 +25,40 @@
 .Card__in {
     overflow: hidden!important;
 }
+
+.wall-post-text {
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.Panel__in {
+    background-color: var(--background_page)!important;
+}
+
+.PanelHeader__separator {
+    background-color: white;
+}
+
+.done-btn {
+    padding: 0;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: calc(286px + env(safe-area-inset-top));
+    right: 10px;
+}
+
+.wall-post {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    margin: 8px 8px 0 8px;
+    background-color: white;
+}
+
+.wall-post .Div {
+    font-size: 15px!important;
+    padding-top: 4px;
+}
