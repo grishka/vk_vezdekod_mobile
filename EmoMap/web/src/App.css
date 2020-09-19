@@ -144,3 +144,27 @@
     font-size: 36px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.08), 0 2px 24px rgba(0, 0, 0, 0.08);
 }
+
+.post-marker {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: var(--control_background);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-marker > .ic {
+    font-size: 18px;
+}
+
+.post-marker > .em {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.ModalPage__content-in {
+    /*height: 350px;*/
+}

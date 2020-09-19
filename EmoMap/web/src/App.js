@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {View} from "@vkontakte/vkui";
+import {ModalPage, ModalPageHeader, ModalRoot, View} from "@vkontakte/vkui";
 import bridge from '@vkontakte/vk-bridge';
 import '@vkontakte/vkui/dist/vkui.css';
 import "./App.css";
@@ -12,6 +12,7 @@ const App = () => {
 	const [activePanel, setActivePanel] = useState("start");
 	const [topicId, setTopicId] = useState(0);
 	const [popout, setPopout] = useState(null);
+	const [modal, setModal] = useState(null);
 
 	const changePanel = (p) => {
 		setActivePanel(p);
@@ -34,10 +35,12 @@ const App = () => {
 	}, []);
 
 	return (
-		<View activePanel={activePanel} popout={popout}>
+		<View activePanel={activePanel} popout={popout} modal={<ModalRoot onClose={() => setModal(null)} activeModal={modal ? "mm" : null}>
+			<ModalPage style={{height: 250}} header={<ModalPageHeader>Запись со стены</ModalPageHeader>} dynamicContentHeight={true} settlingHeight={100} id="mm">{modal}</ModalPage>
+		</ModalRoot>}>
 			<Start id="start" go={changePanel} setPopout={setPopout}/>
 			<Feed id="feed" go={changePanel}/>
-			<Map id="map" go={changePanel} setTopicId={setTopicId}/>
+			<Map id="map" go={changePanel} setTopicId={setTopicId} setModal={setModal}/>
 			<Filter id="filter" topicId={topicId}/>
 		</View>
 	);

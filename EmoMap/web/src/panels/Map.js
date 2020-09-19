@@ -1,10 +1,11 @@
 import React,{useState, useEffect} from 'react';
-import {Button, Panel, PanelHeader, Search} from "@vkontakte/vkui";
+import {Button, ModalRoot, Panel, PanelHeader, Search} from "@vkontakte/vkui";
 import Topic from "../components/Topic";
-import {emotions, topics} from "../state";
+import {emotions, posts, topics} from "../state";
+import Post from "../components/Post";
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
-const Map = ({id, go, setTopicId}) => {
+const Map = ({id, go, setTopicId, setModal}) => {
     const lastChecked = {t: 0};
     const checkInterval = 100;
     const [map, setMap] = useState(null);
@@ -17,8 +18,8 @@ const Map = ({id, go, setTopicId}) => {
         const m = new mapboxgl.Map({
             container: 'mapInside',
             style: 'mapbox://styles/mapbox/light-v10',
-            center: [30.31025, 59.937],
-            zoom: 9.89,
+            center: [30.26417, 59.89444],
+            zoom: 9,
         });
 
         m.on('load', () => {
@@ -28,10 +29,27 @@ const Map = ({id, go, setTopicId}) => {
                 }
             });
 
+            // post markers
+            posts.forEach((p, i) => {
+                const el = document.createElement('div');
+                el.className = 'post-marker';
+                el.id = 'post-marker-' + i;
+                const t = topics[p.topic];
+                const e = emotions[p.emotion];
+                el.innerHTML = `<div class="ic">${t.icon}</div><div class="em">${e.icon}</div>`;
+
+                el.addEventListener('click', () => {
+                    openPost(p);
+                });
+
+                const marker = new mapboxgl.Marker(el)
+                    .setLngLat(new mapboxgl.LngLat(p.lng, p.lat))
+                    .addTo(m);
+            });
+
             // create markers
             topics.forEach((t, i) => {
                 const el = document.createElement('div');
-                el.className = 'topic-marker';
                 el.id = 'topic-marker-' + i;
                 const w = t.radius;
                 el.innerHTML = `<div class="topic-marker" style="width: ${w}px; height: ${w}px;">${t.icon}</div>`;
@@ -56,6 +74,16 @@ const Map = ({id, go, setTopicId}) => {
 
     useEffect(() => {
         //redraw
+        if (!map) return;
+        const zoom = map.getZoom();
+        const tMarkers = document.getElementsByClassName("topic-marker");
+        const pMarkers = document.getElementsByClassName("post-marker");
+        for (let i = 0; i < tMarkers.length; i++) {
+            tMarkers[i].style.display = zoom < 9.97 ? 'flex' : 'none';
+        }
+        for (let k = 0; k < pMarkers.length; k++) {
+            pMarkers[k].style.display = zoom >= 9.97 ? 'flex' : 'none';
+        }
     }, [lTime])
 
     useEffect(() => {
@@ -76,6 +104,10 @@ const Map = ({id, go, setTopicId}) => {
             center: [t.lng, t.lat],
             zoom: 10,
         });
+    };
+
+    const openPost = (p) => {
+        setModal(<div><Post data={p}/><div style={{height: '20px'}}/></div>);
     };
 
     const onMove = () => {

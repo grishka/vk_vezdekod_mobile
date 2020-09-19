@@ -1,5 +1,5 @@
 import React from 'react';
-import {emotions, topics} from "../state";
+import {emotions} from "../state";
 
 const Topic = ({topic, click}) => {
     return (
